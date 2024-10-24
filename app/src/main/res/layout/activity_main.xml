@@ -5,55 +5,93 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FCDA90"
     tools:context=".MainActivity">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#BC1F59"
         android:orientation="vertical"
         android:padding="24dp"
-        android:background="#002B36"
         tools:context=".LoginActivity">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:backgroundTint="#FCDA90"
+            android:fontFamily="@font/irish_grover"
+            android:paddingTop="80dp"
+            android:paddingBottom="90dp"
             android:text="Inicia sesión"
-            android:textSize="24sp"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"/>
+            android:textColor="#FCDA90"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/itim"
+            android:text="Ingresa tu correo electronico"
+            android:textColor="#FCDA90"
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingresa tu correo electrónico"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="ejemplo@gmail.com"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="16dp"/>
+            android:paddingStart="10dp"
+            android:shadowColor="#3E3D3D"
+            android:shadowRadius="30"
+            android:textColor="#ffffff"
+            android:textColorHighlight="#ffffff"
+            android:textColorHint="#6A6565" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/itim"
+            android:text="Ingresa tu contraseña"
+            android:textColor="#FCDA90"
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingresa tu contraseña"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
             android:inputType="textPassword"
-            android:layout_marginTop="16dp"/>
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Siguiente"
-            android:layout_marginTop="24dp"/>
+            android:textColorHint="#6A6565" />
 
         <Button
             android:id="@+id/btnCreateAccount"
-            android:layout_width="match_parent"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="450px"
+            android:backgroundTint="#FCDA90"
             android:text="Crear cuenta"
-            android:layout_marginTop="8dp"/>
+            android:textColor="#000000"
+            android:textColorLink="#FCDA90" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#FCDA90"
+            android:text="Siguiente"
+            android:textColor="#000000" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
