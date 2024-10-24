@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fondo_amarillo">#FCDA90</color>
+    <color name="rojo_oscuro">#AF0745</color>
 </resources>
