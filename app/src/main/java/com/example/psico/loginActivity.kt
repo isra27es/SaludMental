@@ -19,6 +19,7 @@ class loginActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
     private lateinit var btnGoToRegister: Button
+    private lateinit var btnForgotPassword: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var mediaPlayer: MediaPlayer
 
@@ -46,6 +47,7 @@ class loginActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         btnGoToRegister = findViewById(R.id.btnCreateAccount)
+        btnForgotPassword = findViewById(R.id.btnForgotPassword)
 
         // Configurar botón de registro
         btnGoToRegister.setOnClickListener {
@@ -53,10 +55,17 @@ class loginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnForgotPassword.setOnClickListener {
+            val intent = Intent(this, PWRActivity::class.java)
+            startActivity(intent)
+        }
+
         // Configurar botón de inicio de sesión
         btnLogin.setOnClickListener {
             loginUser()
         }
+
+
     }
 
     private fun loginUser() {
