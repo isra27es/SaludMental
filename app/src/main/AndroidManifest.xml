@@ -19,6 +19,9 @@
             android:name=".inicioRegistro"
             android:exported="false" />
         <activity
+            android:name=".DIarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
