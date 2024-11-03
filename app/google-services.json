@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "308548138743",
+    "project_id": "psicol-7942a",
+    "storage_bucket": "psicol-7942a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308548138743:android:547aa31c0b883a0f5e85f2",
+        "android_client_info": {
+          "package_name": "com.example.psico"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv9vjiXJpbKhAYWRLzstscduN2UdMp3mY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
