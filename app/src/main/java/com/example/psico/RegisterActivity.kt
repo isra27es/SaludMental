@@ -52,7 +52,7 @@ class RegisterActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
-                    // Redirigir a HomeActivity después del registro exitoso
+                    // Redirigir a PWRActivity después del registro exitoso
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish() // Cierra RegisterActivity para que no se pueda volver atrás

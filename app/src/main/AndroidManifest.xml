@@ -18,7 +18,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.Psico.NoActionBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".PWRActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
