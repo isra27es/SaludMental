@@ -13,10 +13,21 @@
         android:theme="@style/Theme.Psico"
         tools:targetApi="31">
         <activity
-            android:name=".DIarioActivity"
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Psico.NoActionBar" />
+        <activity
+            android:name=".PWRActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".inicioRegistro"
+            android:exported="false" />
+        <activity
+            android:name=".loginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +35,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

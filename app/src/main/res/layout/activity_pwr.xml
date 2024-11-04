@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PWRActivity">
+
+    <!-- res/layout/activity_reset_password.xml -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFE8A1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restablecer Contraseña"
+            android:textSize="24sp"
+            android:textColor="#B2274A"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/etResetEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa tu correo electrónico"
+            android:background="#B2274A"
+            android:padding="10dp"
+            android:textColor="#FFF"
+            android:textColorHint="#FFF"/>
+
+        <Button
+            android:id="@+id/btnSendReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar solicitud de restablecimiento"
+            android:background="#B2274A"
+            android:textColor="#FFF"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
