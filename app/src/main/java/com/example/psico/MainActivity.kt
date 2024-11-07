@@ -12,6 +12,15 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.psico.databinding.ActivityMainBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.content.Intent
+
+import androidx.appcompat.widget.Toolbar
+
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,13 +32,17 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        fab.setOnClickListener {
+            // Crea un Intent para iniciar ChatActivity
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
+        binding.appBarMain.fab.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
