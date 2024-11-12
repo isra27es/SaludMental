@@ -1,8 +1,9 @@
 {
   "project_info": {
     "project_number": "308548138743",
+    "firebase_url": "https://psicol-7942a-default-rtdb.firebaseio.com",
     "project_id": "psicol-7942a",
-    "storage_bucket": "psicol-7942a.appspot.com"
+    "storage_bucket": "psicol-7942a.firebasestorage.app"
   },
   "client": [
     {
