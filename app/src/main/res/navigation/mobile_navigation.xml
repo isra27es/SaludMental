@@ -11,11 +11,12 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
+    <!-- Configuración para navegar a DiarioFragment -->
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.psico.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_diario"
+        android:name="com.example.psico.ui.diario.DiarioFragment"
+        android:label="@string/menu_diario"
+        tools:layout="@layout/activity_diario2" />
 
     <fragment
         android:id="@+id/nav_slideshow"
