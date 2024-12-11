@@ -76,7 +76,9 @@
                 android:background="@drawable/rounded_edittext"
                 android:inputType="textPassword"
                 android:paddingStart="10dp"
-                android:textColorHint="#6A6565" />
+                android:textColorHint="#6A6565"
+                android:hint="Introduce tu contraseña" />
+
 
 
 

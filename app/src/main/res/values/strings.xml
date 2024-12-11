@@ -11,4 +11,5 @@
     <string name="menu_home">Home</string>
     <string name="menu_diario">Diario</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_chat">ChatActivity</string>
 </resources>
