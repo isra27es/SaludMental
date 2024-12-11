@@ -7,6 +7,8 @@ import kotlinx.coroutines.withContext
 import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
+import org.json.JSONObject
+
 
 class DialogflowService(private val context: Context) {
 
@@ -47,25 +49,34 @@ class DialogflowService(private val context: Context) {
             connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8")
 
             val requestBody = """
-                {
-                  "queryInput": {
-                    "text": {
-                      "text": "$message",
-                      "languageCode": "es"
-                    }
-                  }
+            {
+              "queryInput": {
+                "text": {
+                  "text": "$message",
+                  "languageCode": "es"
                 }
-            """.trimIndent()
+              }
+            }
+        """.trimIndent()
 
             connection.doOutput = true
             connection.outputStream.write(requestBody.toByteArray(Charsets.UTF_8))
 
             val responseCode = connection.responseCode
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                connection.inputStream.bufferedReader().use { it.readText() }
+                val response = connection.inputStream.bufferedReader().use { it.readText() }
+
+                // Extrae fulfillmentText del JSON de la respuesta
+                val jsonResponse = JSONObject(response)
+                val fulfillmentText = jsonResponse
+                    .getJSONObject("queryResult")
+                    .getString("fulfillmentText")
+
+                fulfillmentText // Devuelve solo fulfillmentText
             } else {
                 throw Exception("Error en la solicitud a Dialogflow: Código de respuesta $responseCode")
             }
         }
     }
+
 }

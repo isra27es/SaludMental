@@ -55,10 +55,9 @@ class ChatActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val sessionId = "unique_session_id"
-                val response = dialogflowService.sendMessageToDialogflow(sessionId, message)
+                val fulfillmentText = dialogflowService.sendMessageToDialogflow(sessionId, message)
+                chatMessages.add("Bot: $fulfillmentText")
 
-                // Añade la respuesta de Dialogflow a la lista y actualiza el RecyclerView
-                chatMessages.add("Bot: $response")
                 chatAdapter.notifyItemInserted(chatMessages.size - 1)
                 chatRecyclerView.scrollToPosition(chatMessages.size - 1)
             } catch (e: Exception) {
