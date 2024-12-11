@@ -1,10 +1,11 @@
 package com.example.psico
+
 import DialogflowService
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageButton
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +16,7 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var dialogflowService: DialogflowService
     private lateinit var chatRecyclerView: RecyclerView
     private lateinit var messageEditText: EditText
-    private lateinit var sendButton: Button
+    private lateinit var sendButton: AppCompatImageButton // Cambiado a AppCompatImageButton
     private val chatMessages = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,12 +29,12 @@ class ChatActivity : AppCompatActivity() {
         // Configura las vistas
         chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageEditText = findViewById(R.id.messageEditText)
-        sendButton = findViewById(R.id.sendButton)
+        sendButton = findViewById(R.id.sendButton) // Usando AppCompatImageButton
 
         // Configura el RecyclerView
-        chatRecyclerView.layoutManager = LinearLayoutManager(this)
         val chatAdapter = ChatAdapter(chatMessages)
         chatRecyclerView.adapter = chatAdapter
+        chatRecyclerView.layoutManager = LinearLayoutManager(this)
 
         // Configura el botón de enviar mensaje
         sendButton.setOnClickListener {
